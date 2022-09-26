@@ -9,7 +9,7 @@ router.get("/", (req, res) => res.json({ msg: "Empyees Works" }));
 router.get("/getemployees/:accessToken", (req, res)=>{
     var config = {
         method: 'get',
-        url: 'https://api.greythr.com/employee/v2/employees?page=1&size=35',
+        url: 'https://api.greythr.com/employee/v2/employees?page=1&size=500',
         headers: { 
           'ACCESS-TOKEN': req.params.accessToken, 
           'x-greythr-domain': 'tousifapisso.greythr.com'
