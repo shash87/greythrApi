@@ -16,7 +16,10 @@ router.get("/getemployees/:accessToken", (req, res)=>{
         }
       };
       
-      axios(config)
+      axios(config, {
+        method: 'HEAD',
+        mode: 'no-cors',
+      })
       .then(function (response) {
         console.log(JSON.stringify(response.data));
         return res.json(response.data)
